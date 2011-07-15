@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="">
+        <source>Click send first in order to connect your twitter account.</source>
+        <target>Twitterアカウントと連携するために、まず送信ボタンをクリックしてください。</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

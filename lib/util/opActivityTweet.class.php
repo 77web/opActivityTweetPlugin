@@ -11,10 +11,20 @@ class opActivityTweet
   
   const POST_URI = 'https://twitter.com/statuses/update.xml';
   
-  public static function initialize()
+  protected static function initialize()
   {
     self::$consumer_key = sfConfig::get('app_twitter_consumer_key');
     self::$consumer_secret = sfConfig::get('app_twitter_consumer_secret');
+  }
+  
+  public static function getInstance($oauth_token = null, $oauth_secret = null)
+  {
+    if(empty(self::$consumer_key) || empty(self::$consumer_secret))
+    {
+      self::initialize();
+    }
+    
+    return new TwitterOAuth(self::$consumer_key, self::$consumer_secret, $oauth_token, $oauth_secret);
   }
   
   protected static function setup($oauth_token, $oauth_secret)

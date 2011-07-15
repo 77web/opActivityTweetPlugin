@@ -1,0 +1,7 @@
+configSuccess:
+  customize:
+    activity_tweet_twitter_connect_description:
+      template: [opActivityTweetPlugin, oauthDescription]
+      is_component: false
+      parts: [activityTweetForm]
+      target: [formTop]
