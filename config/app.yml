@@ -1,0 +1,5 @@
+all:
+  twitter_consumer_key: "your consumer key"
+  twitter_consumer_secret: "your consumer secret"
+  op_activity_tweet_plugin_tweet_prefix: "[opActivityTweetPluginから投稿]"
+  op_activity_tweet_plugin_tweet_suffix: "#openpne"

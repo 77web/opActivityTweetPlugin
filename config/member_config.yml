@@ -1,0 +1,18 @@
+activityTweet:
+  _attributes:
+    caption: "Twitter同時投稿設定"
+    enable_pc: true
+    enable_mobile: false
+  is_tweet_activity:
+    Name: "is_tweet_activity"
+    Caption: "アクティビティをTwitterに同時投稿する"
+    FormType: "select"
+    ValueType: "integer"
+    IsRegist: false
+    IsConfig: true
+    IsRequired: false
+    IsUnique: false
+    Default: 0
+    Choices:
+      0: "投稿しない"
+      1: "投稿する"
