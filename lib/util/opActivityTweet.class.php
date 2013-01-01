@@ -62,35 +62,4 @@ class opActivityTweet
       }
     }
   }
-  
-  /*
-  public static function tweetAdmin($message)
-  {
-    if(''!==$message)
-    {
-      $oauth_token =  Doctrine::getTable('SnsConfig')->get('twitter_oauth_token');
-      $oauth_secret =  Doctrine::getTable('SnsConfig')->get('twitter_oauth_token_secret');
-      
-      self::setup($oauth_token, $oauth_secret);
-      
-      self::$connection->post(self::POST_URI, array('status'=>$message, 'oauth_token'=>$oauth_token, 'oauth_secret'=>$oauth_secret));
-
-      if(self::$connection)
-      {
-        $prefix = sfConfig::get('app_op_activity_tweet_plugin_tweet_prefix');
-        if('' != $prefix)
-        {
-          $message = $prefix.' '.$message;
-        }
-        $suffix = sfConfig::get('app_op_activity_tweet_plugin_tweet_suffix');
-        if('' != $suffix)
-        {
-          $message = $message.' '.$suffix;
-        }
-        self::$connection->post(self::POST_URI, array('status'=>$message, 'oauth_token'=>$oauth_token, 'oauth_secret'=>$oauth_secret));
-        self::$connection = null;
-      }
-    }
-  }
-  */
 }
