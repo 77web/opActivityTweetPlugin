@@ -9,7 +9,7 @@ class opActivityTweet
   
   protected static $connection;
   
-  const POST_URI = 'https://twitter.com/statuses/update.xml';
+  const POST_URI = 'statuses/update.json';
   
   protected static function initialize()
   {
@@ -57,7 +57,7 @@ class opActivityTweet
         {
           $message = $message.' '.$suffix;
         }
-        self::$connection->post(self::POST_URI, array('status'=>$message, 'oauth_token'=>$oauth_token, 'oauth_secret'=>$oauth_secret));
+        self::$connection->post(self::$connection->host.self::POST_URI, array('status'=>$message, 'oauth_token'=>$oauth_token, 'oauth_secret'=>$oauth_secret));
         self::$connection = null;
       }
     }
